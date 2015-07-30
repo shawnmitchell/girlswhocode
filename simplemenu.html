@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Menu</title>
+  <link rel="stylesheet" type="text/css" href="./css/layout.css">
+  <script type="text/javascript">
+  function showOne() {
+    document.getElementById("one").style.display="block"
+    document.getElementById("two").style.display="none"
+    document.getElementById("three").style.display="none"
+  }
+  function showTwo() {
+    document.getElementById("two").style.display="block"
+    document.getElementById("one").style.display="none"
+    document.getElementById("three").style.display="none"
+  }
+  function showThree() {
+    document.getElementById("three").style.display="block"
+    document.getElementById("one").style.display="none"
+    document.getElementById("two").style.display="none"
+  }
+  function onLoad() {
+    showOne();
+  }
+  </script>
+</head>
+<body onload="onLoad()">
+  <div id="menu" class="col-2 menu">
+    <ul>
+      <li onclick="javascript:showOne()">
+        One
+      </li>
+      <li onclick="javascript:showTwo()">
+        Two
+      </li>
+      <li onclick='javascript:showThree()'>
+        Three
+      </li>
+    </ul>
+  </div>
+  <div id='block' class="col-10 main">
+    <div id="one" class='content'>One Thing</div>
+    <div id="two" class='content'>Another Thing</div>
+    <div id="three" class='content'>Last Thing</div>
+  </div>
+</body>
+</html>
